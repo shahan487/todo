@@ -1,0 +1,27 @@
+<h1>Listing Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tasks Name</th>
+
+      <th> Task ID</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for task <- @tasks do %>
+    <tr>
+      <td><%= task.name %></td>
+      <td>
+        <span><%= task.project_id %></span>
+      </td>    
+    </tr>
+<% end %>
+  </tbody>
+<span><%= link "New Tasks", to: Routes.project_task_path(@conn, :new, @project_id) %></span>
+</table>
+
+
+
+
+

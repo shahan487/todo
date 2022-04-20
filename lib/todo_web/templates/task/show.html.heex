@@ -1,13 +1,11 @@
 <h1>Show Task</h1>
 
 <ul>
-
   <li>
     <strong>Name:</strong>
     <%= @task.name %>
   </li>
-
 </ul>
 
-<span><%= link "Edit", to: Routes.project_task_path(@conn, :edit, @task) %></span> |
-<span><%= link "Back", to: Routes.project_task_path(@conn, :index) %></span>
+<span><%= link "Edit", to: Routes.project_task_path(@conn, :edit, @project_id, @task.id) %></span> |
+<span><%= link "Back", to: Routes.project_task_path(@conn, :index, @project_id) %></span>
